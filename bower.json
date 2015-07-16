@@ -1,0 +1,19 @@
+{
+  "name": "Base Html Project",
+  "version": "0.0.1",
+  "authors": [
+    "raj <rajesh.krishnan@wyndham.vic.gov.au>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dojo": "~1.10.4"
+  }
+}
