@@ -8,25 +8,28 @@
     <meta name="viewport"
       content="target-densitydpi=device-dpi, width = 320, user-scalable = 0">
     <title>Base HTML</title>
-    <script type="text/javascript" src="js/head.min.js"></script>
 </head>
     <body>
       <h1 id="greeting"> sample text</h1>
       <script type="text/javascript">
           var dojoConfig = {
             async:true,
-            packages: [{
-              name: "demo",
-              location: location.pathname.replace(/\/[^/]*$/, '') + '/demo'
-          }]
+            baseUrl:"./",
+            packages: [
+              {name: 'dojo', location:"bower_components/dojo"},
+              {name: 'dijit', location:"bower_components/dijit"},
+              {name: 'dojox', location:"bower_components/dojox"},
+              {name: 'myModule', location:"demo", main:"myModule"}
+            ]
         };
       </script>
-      <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+      <script src="/bower_components/dojo/dojo.js"></script>
+
 
       <script type="text/javascript">
         require([
             'dojo/dom',
-            'demo/myModule',
+            'myModule',
             'dojo/fx',
             'dojo/domReady!'
           ],
